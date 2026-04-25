@@ -16,9 +16,9 @@ This site is a public-safe technical portfolio for English readers. It explains 
 
 ## Featured Project
 
-[LLM Infra Design Studio]({{ '/projects/llm-infra-design-studio/' | relative_url }}) is a Markdown-first workflow prototype for LLM-assisted infrastructure design. It demonstrates source manifests, requirement extraction, design logic review, semantic delta detection, artifact updates, validation scripts, and human approval gates.
+[LLM Infra Design Studio]({{ '/projects/llm-infra-design-studio/' | relative_url }}) is a Markdown-first workflow prototype for LLM-assisted infrastructure design. The public-safe v1.0 private preview demonstrates source manifests, requirement extraction, design logic review, semantic delta detection, artifact updates, validation scripts, and human approval gates.
 
-Repository: coming soon
+Repository: private preview
 
 ## Design Philosophy
 

@@ -8,13 +8,13 @@ description: Markdown-first workflow prototype for LLM-assisted infrastructure d
 
 LLM Infra Design Studio is a Markdown-first workflow prototype for LLM-assisted infrastructure design.
 
-Repository: coming soon
+Repository: private preview
 
 ## Project Overview
 
 The project explores how LLMs can support infrastructure design work without taking over engineering judgment. It turns fragmented inputs into structured artifacts that are easier to review, challenge, approve, and reuse.
 
-The current v0.1 prototype is built around a synthetic enterprise infrastructure scenario. It uses Markdown documents, templates, sample inputs, sample outputs, lightweight evaluation cases, and validation scripts.
+The current public-safe v1.0 private preview is built around a synthetic enterprise infrastructure scenario. It uses Markdown documents, templates, sample inputs, sample outputs, lightweight evaluation cases, and validation scripts.
 
 ## Problem
 
@@ -65,7 +65,7 @@ The LLM's role is to structure information, surface contradictions, draft review
 
 ## Current Status
 
-v0.1 is a local Markdown-first prototype with:
+v1.0 private preview is a local Markdown-first prototype with:
 
 - README and docs for public explanation.
 - Synthetic samples and templates.
