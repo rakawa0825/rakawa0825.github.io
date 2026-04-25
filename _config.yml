@@ -1,0 +1,8 @@
+title: "Naoyuki Hirakawa"
+description: "LLM-assisted infrastructure design lifecycle and workflow automation"
+author: "Naoyuki Hirakawa"
+markdown: kramdown
+permalink: /:categories/:title/
+exclude:
+  - README.md
+  - notes/
