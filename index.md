@@ -10,21 +10,22 @@ I design LLM-assisted workflows that turn fragmented infrastructure design infor
 
 ## About
 
-My work focuses on the practical boundary between enterprise infrastructure engineering and AI-assisted workflow automation. I am interested in systems that help engineers structure evidence, preserve uncertainty, review design changes, and keep human decisions visible.
+My work focuses on the practical boundary between enterprise infrastructure engineering and AI-assisted workflow automation. I build workflows for network design review domains where engineers need traceable evidence, visible uncertainty, validation checks, and explicit human approval before design language becomes authoritative.
 
 This site is a public-safe technical portfolio for English readers. It explains reusable workflow patterns rather than private project details.
 
 ## Featured Project
 
-[LLM Infra Design Studio]({{ '/projects/llm-infra-design-studio/' | relative_url }}) is a Markdown-first workflow prototype for LLM-assisted infrastructure design. The public-safe v1.0 private preview demonstrates source manifests, requirement extraction, design logic review, semantic delta detection, artifact updates, validation scripts, and human approval gates.
+[LLM Infra Design Studio]({{ '/projects/llm-infra-design-studio/' | relative_url }}) is a Markdown-first workflow prototype for the LLM-assisted infrastructure design lifecycle. The public-safe v1.0 private preview demonstrates source manifests, requirement extraction, design logic review, semantic delta detection, artifact updates, a CLI validation runner, LLM contract and failure-mode validation, and human approval gates.
 
-Repository: private preview
+Repository: private preview / available upon request
 
 ## Design Philosophy
 
 - LLMs should structure evidence before drafting conclusions.
 - Uncertainty should remain visible as assumptions, unresolved issues, and confirmation items.
 - Human approval should be part of the workflow, not an afterthought.
+- LLM contracts and failure-mode checks should be explicit before generated artifacts are trusted.
 - Markdown-first systems are useful before SaaS UI because they are inspectable, versionable, and easy to review.
 - Validation should start small and run locally before the workflow grows.
 

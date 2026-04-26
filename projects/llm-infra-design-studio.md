@@ -6,15 +6,15 @@ description: Markdown-first workflow prototype for LLM-assisted infrastructure d
 
 # LLM Infra Design Studio
 
-LLM Infra Design Studio is a Markdown-first workflow prototype for LLM-assisted infrastructure design.
+LLM Infra Design Studio is a Markdown-first workflow prototype for the LLM-assisted infrastructure design lifecycle, focused on network design review domains.
 
-Repository: private preview
+Repository: private preview / available upon request
 
 ## Project Overview
 
 The project explores how LLMs can support infrastructure design work without taking over engineering judgment. It turns fragmented inputs into structured artifacts that are easier to review, challenge, approve, and reuse.
 
-The current public-safe v1.0 private preview is built around a synthetic enterprise infrastructure scenario. It uses Markdown documents, templates, sample inputs, sample outputs, lightweight evaluation cases, and validation scripts.
+The current public-safe v1.0 private preview is built around a synthetic enterprise infrastructure scenario. It uses Markdown documents, templates, sample inputs, sample outputs, lightweight evaluation cases, a CLI validation runner, and explicit LLM contract / failure-mode validation.
 
 ## Problem
 
@@ -47,7 +47,7 @@ Source Intake
 - A public-safe prototype for LLM-assisted infrastructure design workflows.
 - A Markdown-first structure for agents, skills, workflows, templates, samples, evals, scripts, and reports.
 - A synthetic sample project for branch connectivity, cloud security, monitoring, and detailed-design handoff.
-- A demonstration of source traceability, semantic delta detection, artifact updates, and human approval.
+- A demonstration of source traceability, semantic delta detection, artifact updates, CLI validation, LLM contract checks, failure-mode validation, and human approval.
 
 ## What The Project Is Not
 
@@ -69,7 +69,8 @@ v1.0 private preview is a local Markdown-first prototype with:
 
 - README and docs for public explanation.
 - Synthetic samples and templates.
-- Lightweight validation scripts.
+- A CLI validation runner and lightweight validation scripts.
+- LLM contract and failure-mode validation for generated artifacts.
 - Initial quality review and publication preflight reports.
 
 ## Future Direction
