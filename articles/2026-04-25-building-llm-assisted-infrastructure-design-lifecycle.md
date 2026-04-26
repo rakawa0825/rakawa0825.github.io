@@ -2,6 +2,7 @@
 layout: default
 title: Building an LLM-Assisted Infrastructure Design Lifecycle
 category: articles
+permalink: /articles/building-llm-assisted-infrastructure-design-lifecycle/
 description: Why infrastructure design needs lifecycle-oriented LLM workflows instead of one-shot generation.
 ---
 

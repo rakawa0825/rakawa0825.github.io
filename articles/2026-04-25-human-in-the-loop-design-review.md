@@ -2,6 +2,7 @@
 layout: default
 title: Human-in-the-Loop Design Review
 category: articles
+permalink: /articles/human-in-the-loop-design-review/
 description: Human governance patterns for LLM-assisted infrastructure engineering workflows.
 ---
 

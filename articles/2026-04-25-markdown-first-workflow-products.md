@@ -2,6 +2,7 @@
 layout: default
 title: Markdown-First Workflow Products
 category: articles
+permalink: /articles/markdown-first-workflow-products/
 description: Why Markdown is a useful starting point for LLM-assisted workflow products.
 ---
 
