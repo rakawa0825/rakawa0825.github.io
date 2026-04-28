@@ -8,7 +8,7 @@ description: A source-backed workflow pattern for turning fragmented infrastruct
 
 # Turning Fragmented Infrastructure Evidence into Reviewable Design Decisions
 
-I am not trying to replace engineers with AI.
+I am not trying to make AI own engineering decisions.
 
 I am building workflow structures that help engineers turn fragmented infrastructure information into reviewable, traceable, and human-approved decisions.
 
@@ -107,13 +107,13 @@ The repository includes:
 
 The validation scripts check repository structure, sample outputs, source registry assets, LLM contract fixtures, failure-mode behavior, unresolved assertions, expected-output drift, and sensitive identifier hygiene.
 
-This does not make the project production-ready. It makes the workflow inspectable.
+This does not make the project ready for production use. It makes the workflow inspectable.
 
 ## What this is not
 
-This is not an autonomous infrastructure design system.
+This is not a self-directed infrastructure design system.
 
-It is not a production-ready network design tool. It is not a replacement for qualified engineers. It is not a repository for real customer data. It is not a SaaS product. It does not claim guaranteed correctness.
+It is not a network design tool ready for production use. It does not substitute for qualified engineers. It is not a repository for real customer data. It is not a SaaS product. It does not claim correctness by default.
 
 The purpose is narrower and more practical: define a workflow structure that helps human reviewers turn messy evidence into source-backed design review artifacts.
 
