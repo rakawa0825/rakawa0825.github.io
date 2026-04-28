@@ -31,6 +31,7 @@ Repository: private preview / available upon request
 
 ## Articles
 
+- [Turning Fragmented Infrastructure Evidence into Reviewable Design Decisions]({{ '/articles/turning-fragmented-infrastructure-evidence-into-reviewable-design-decisions/' | relative_url }})
 - [Building an LLM-Assisted Infrastructure Design Lifecycle]({{ '/articles/building-llm-assisted-infrastructure-design-lifecycle/' | relative_url }})
 - [Markdown-First Workflow Products]({{ '/articles/markdown-first-workflow-products/' | relative_url }})
 - [Human-in-the-Loop Design Review]({{ '/articles/human-in-the-loop-design-review/' | relative_url }})
