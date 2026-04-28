@@ -8,19 +8,40 @@ description: A source-backed workflow pattern for turning fragmented infrastruct
 
 # Turning Fragmented Infrastructure Evidence into Reviewable Design Decisions
 
+Infrastructure design work rarely fails because engineers cannot write documents.
+
+It fails because the information needed to write those documents is scattered, partial, stale, and politically ambiguous.
+
+A review comment says one thing. A meeting transcript suggests another. A vendor answer explains product behavior, but not the customer's actual design decision. An existing design document reflects an old baseline. A slide deck contains an important diagram, but no one is sure whether it is still authoritative. A detailed-design issue gets mixed into a high-level design review. A decision is mentioned in a meeting, but never reflected into the artifact that the next team will actually use.
+
+Then someone says:
+
+> Please update the design document.
+
+That sentence sounds simple. In reality, it often means:
+
+- Find the source.
+- Recover the context.
+- Separate confirmed facts from assumptions.
+- Identify what is still unresolved.
+- Decide what belongs in the main design, what belongs in detailed design, and what must be escalated.
+- Preserve enough traceability so another engineer can review the change later.
+
+This is the messy layer where many enterprise infrastructure projects slow down.
+
+It is not glamorous. It is not a clean prompt-engineering problem. It is a source, context, responsibility, and approval problem.
+
+That is the problem I am exploring with LLM Infra Design Studio.
+
 I am not trying to make AI own engineering decisions.
 
 I am building workflow structures that help engineers turn fragmented infrastructure information into reviewable, traceable, and human-approved decisions.
 
-That positioning matters because infrastructure design is not just a writing task. It is a review process shaped by source evidence, unresolved questions, operational constraints, and human approval boundaries.
-
 ## The problem: infrastructure design evidence is fragmented
 
-Enterprise infrastructure design work rarely starts from a clean source of truth. Important information is often scattered across meeting notes, review comments, vendor answers, existing design documents, technical references, unresolved issues, and human approval decisions.
+Enterprise infrastructure design work rarely starts from a clean source of truth. Important information is scattered across meeting notes, review comments, vendor answers, existing design documents, technical references, unresolved issues, and human approval decisions.
 
-Each source can carry a different level of authority. A meeting note may capture intent but not approval. A vendor answer may clarify behavior but not define the customer's design requirement. An existing design document may describe the current baseline but not approve a new change. A review comment may identify a risk without deciding how to resolve it.
-
-The practical problem is not only that information is messy. The problem is that design teams need to know what each statement means, where it came from, whether it is current, and who must approve it before it becomes design language.
+Each source carries a different level of authority. A meeting note may capture intent but not approval. A vendor answer may clarify behavior but not define the design requirement. An existing design document may describe the current baseline but not approve a new change. A review comment may identify a risk without deciding how to resolve it.
 
 ## Why one-shot LLM generation is not enough
 
@@ -59,7 +80,30 @@ The final output is a reviewable design patch and operational handoff package, n
 
 ## The Review-to-Patch pattern
 
-A smaller version of the pattern is:
+A small example makes the problem clearer.
+
+Suppose a design review comment says:
+
+> Clarify whether branch traffic should pass through the cloud security service.
+
+That comment is not enough to update a design document.
+
+A meeting note may show that someone proposed the flow. A vendor document may explain that the product supports it. An existing baseline may show the current route. A security reviewer may still need to confirm inspection scope. A routing owner may still need to confirm failover behavior. A QoS decision may belong in detailed design, not in the high-level design document.
+
+If an LLM turns that comment directly into final design language, the output may look useful but be unsafe.
+
+A better workflow should first ask:
+
+- Which source introduced this requirement?
+- Is it confirmed, proposed, or unresolved?
+- Which artifact would be affected?
+- What must remain `review_required`?
+- What should be handed off to detailed design?
+- Who must approve the change before it becomes official language?
+
+That is the Review-to-Patch problem.
+
+The smaller pattern is:
 
 ```text
 review comment
@@ -70,18 +114,7 @@ review comment
 -> human approval checklist
 ```
 
-This pattern helps convert review comments into structured artifacts without losing the source context behind them.
-
-For example, a synthetic review comment might say that a branch site may need a new flow through a cloud security service. That statement alone is not enough to update a design. The workflow should ask:
-
-- Which source made the statement?
-- Is the traffic flow confirmed or only proposed?
-- Is the inspection scope known?
-- Does routing or QoS treatment remain ambiguous?
-- Does any item belong in detailed design rather than the main design document?
-- Who must approve the patch before it is reflected?
-
-The LLM Infra Design Studio repository includes a minimal synthetic Review-to-Patch dataset that demonstrates this flow. It uses fictional identifiers and public-safe examples only.
+The LLM Infra Design Studio repository includes a minimal synthetic Review-to-Patch dataset that demonstrates this flow with fictional identifiers and public-safe examples only.
 
 ## Human approval is not optional
 
