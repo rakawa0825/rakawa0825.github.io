@@ -146,7 +146,7 @@ This does not make the project ready for production use. It makes the workflow i
 
 This is not a self-directed infrastructure design system.
 
-It is not a network design tool ready for production use. It does not substitute for qualified engineers. It is not a repository for real customer data. It is not a SaaS product. It does not claim correctness by default.
+It is not a network design tool ready for production use. It does not substitute for qualified engineers. It is not a repository for private project data. It is not a SaaS product. It does not claim correctness by default.
 
 The purpose is narrower and more practical: define a workflow structure that helps human reviewers turn messy evidence into source-backed design review artifacts.
 
@@ -158,8 +158,10 @@ That requires more than prompts. It requires source handling, review states, fai
 
 When those pieces are explicit, an LLM-assisted workflow can make expert review faster and clearer without pretending that the model owns the engineering decision.
 
-## Repository
+## Public preview repository
 
-Repository: [LLM Infra Design Studio](https://github.com/rakawa0825/llm-infra-design-studio)
+A public preview repository for this workflow prototype is available here:
 
-The repository uses synthetic examples only and is intended as a public-safe workflow prototype.
+[LLM Infra Design Studio](https://github.com/rakawa0825/llm-infra-design-studio)
+
+The repository uses synthetic examples only. It is intended for public portfolio visibility and review, not as a deployed system or a reusable project under a selected license.
