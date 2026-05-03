@@ -135,10 +135,13 @@ The repository includes:
 - a Review-to-Patch Pipeline,
 - a Source Context Card schema,
 - a minimal synthetic example dataset,
+- a Markdown-only traceability sample that links source evidence, requirements, review items, decisions, handoffs, and validation records with stable IDs,
 - a CLI Validation Runner,
 - public-safe validation checks.
 
 The validation scripts check repository structure, sample outputs, source registry assets, LLM contract fixtures, failure-mode behavior, unresolved assertions, expected-output drift, and sensitive identifier hygiene.
+
+The newer traceability sample is still synthetic and review-oriented. It is meant to make the evidence-to-decision chain easier to inspect, not to claim production automation or final design approval.
 
 This does not make the project ready for production use. It makes the workflow inspectable.
 
